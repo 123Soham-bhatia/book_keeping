@@ -1,0 +1,120 @@
+/* src/styles.css - Bookish Theme */
+:root {
+  --book-brown: #8B4513;      /* Primary: Saddle brown for headers/buttons */
+  --book-choc: #D2691E;       /* Accent: Chocolate for links/hovers */
+  --book-beige: #F5F5DC;      /* Background: Beige for cards/pages */
+  --book-green: #556B2F;      /* Highlight: Dark olive green for reviews/success */
+  --book-cream: #FFF8DC;      /* Subtle: Cornsilk for forms */
+  --shadow-book: 0 4px 6px -1px rgba(139, 69, 19, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --font-bookish: 'Inter', sans-serif;  /* Add <link> for Inter in index.html if needed */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-bookish);
+  background-color: var(--book-beige);
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background-color: var(--book-cream);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-book);
+  border: 1px solid var(--book-beige);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 12px -2px rgba(139, 69, 19, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn {
+  background-color: var(--book-brown);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--book-choc);
+}
+
+.btn-secondary {
+  background-color: var(--book-green);
+}
+
+.btn-secondary:hover {
+  background-color: #6B8E23;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--book-choc);
+  box-shadow: 0 0 0 2px rgba(210, 105, 30, 0.2);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--book-choc);
+}
+
+.stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star-filled {
+  color: var(--book-choc);
+}
+
+.star-empty {
+  color: #ddd;
+}
+
+.grid-books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.gradient-bg {
+  background: linear-gradient(to bottom right, var(--book-beige), var(--book-cream));
+}
